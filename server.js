@@ -15,6 +15,7 @@ var server = http.createServer(function (request, response){
 		'</html>'
 		);
 
+  console.log(request);
   response.end();
 })
 
