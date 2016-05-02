@@ -2,18 +2,19 @@ var http = require("http");
 
 var server = http.createServer(function (request, response){
 	//send the HTTP header
-	response.writeHead(200, {'Content-Type': 'text/plain'});
+ response.writeHead(200, {"Content-Type": "text/html"});
 
 	//send the response body
-  response.write("<!DOCTYPE "html">");
-  response.write("<html>");
-  response.write("<head>");
-  response.write("<title>Hello World Page</title>");
-  response.write("</head>");
-  response.write("<body>");
-  response.write("Hello World!");
-  response.write("</body>");
-  response.write("</html>");
+  response.write('<head>'+
+		'<meta http-equiv="Content-Type" '+
+		'content="text/html; charset=UTF-8" />'+
+		'</head>'+
+		'<body>'+
+		'<h1>Hello World!</h1>'+
+		'</body>'+
+		'</html>'
+		);
+
   response.end();
 })
 
